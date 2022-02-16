@@ -1,0 +1,32 @@
+plugins {
+    id "io.freefair.lombok" version "6.0.0-m2"
+    id 'idea'
+}
+
+version = '0.0.1'
+
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'java-library'
+    apply plugin: 'maven'
+    apply plugin: 'java-test-fixtures'
+    apply plugin: 'io.freefair.lombok'
+
+    group = 'br.com.armange'
+    sourceCompatibility = 11
+
+    apply from: "$rootDir/gradle/library.gradle"
+    apply from: "$rootDir/gradle/repositories.gradle"
+    apply from: "$rootDir/gradle/projects.gradle"
+    apply from: "$rootDir/gradle/configurations.gradle"
+    apply from: "$rootDir/gradle/idea.gradle"
+    apply from: "$rootDir/gradle/sharedDependencies.gradle"
+}
+
+subprojects {
+    apply from: "$rootDir/gradle/$name/dependencies.gradle"
+    apply from: "$rootDir/gradle/jar.gradle"
+    apply from: "$rootDir/gradle/test.gradle"
+}
+
+apply from: "$projectDir/gradle/dependencies.gradle"

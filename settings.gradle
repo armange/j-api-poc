@@ -1,0 +1,6 @@
+rootProject.name = 'j-api-poc'
+include 'domain',
+        'h2_repository',
+		'http_api',
+		'redis_repository',
+		'websocket_api'

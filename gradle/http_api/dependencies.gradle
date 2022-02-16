@@ -1,0 +1,8 @@
+dependencies {
+    testImplementation (library.junit_jupiter_api){
+        exclude group: 'org.hamcrest'
+    }
+    testImplementation library.org_assertj_assertj_core
+    testImplementation library.org_mockito_mockito_core
+    testImplementation library.org_hamcrest_hamcrest
+}

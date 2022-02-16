@@ -1,0 +1,21 @@
+def
+        NET_BYTE_BUDDY = '1.10.21',
+        ORG_SLF4J = '1.7.32',
+        ORG_LOG4J = '2.17.1'
+ext.library = [
+    // Eclipse Public License v2.0
+    junit_jupiter_api: "org.junit.jupiter:junit-jupiter-api:5.8.2",
+    junit_jupiter_params: "org.junit.jupiter:junit-jupiter-params:5.8.2",
+
+    // The Apache Software License, Version 2.0
+    org_assertj_assertj_core: "org.assertj:assertj-core:3.12.1",
+    org_hamcrest_hamcrest: "org.hamcrest:hamcrest:2.1",
+    org_mockito_mockito_core: "org.mockito:mockito-core:3.12.4",
+
+    net_bytebuddy_byte_buddy: "net.bytebuddy:byte-buddy:${NET_BYTE_BUDDY}",
+    net_bytebuddy_byte_buddy_agent: "net.bytebuddy:byte-buddy-agent:${NET_BYTE_BUDDY}",
+
+    org_slf4j_slf4j_api: "org.slf4j:slf4j-api:${ORG_SLF4J}",
+    org_slf4j_slf4j_simple: "org.slf4j:slf4j-simple:${ORG_SLF4J}",
+    org_apache_logging_log4j_log4j_core: "org.apache.logging.log4j:log4j-core:${ORG_LOG4J}"
+]

@@ -1,0 +1,7 @@
+ext.projects = [
+    domain: project(':domain'),
+    h2_repository: project(':h2_repository'),
+    http_api: project(':http_api'),
+    redis_repository: project(':redis_repository'),
+    websocket_api: project(':websocket_api')
+]
